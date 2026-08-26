@@ -1,0 +1,29 @@
+<svg width="1200" height="780" viewBox="0 0 1200 780" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="780" rx="28" fill="#F3F4F6"/>
+  <rect x="180" y="90" width="840" height="600" rx="28" fill="white"/>
+  <rect x="220" y="130" width="220" height="26" rx="13" fill="#E0E7FF"/>
+  <text x="220" y="148" fill="#4F46E5" font-family="Arial, sans-serif" font-size="16" font-weight="700">PROYECTO PARA PRINCIPIANTES</text>
+  <text x="220" y="220" fill="#111827" font-family="Arial, sans-serif" font-size="52" font-weight="700">Mi lista de tareas</text>
+  <text x="220" y="260" fill="#4B5563" font-family="Arial, sans-serif" font-size="24">Escribe lo que debes hacer hoy y marca cada tarea.</text>
+
+  <rect x="220" y="300" width="520" height="52" rx="14" fill="#F9FAFB" stroke="#D1D5DB"/>
+  <text x="248" y="334" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="24">Ejemplo: Estudiar JavaScript</text>
+  <rect x="760" y="300" width="180" height="52" rx="14" fill="#4F46E5"/>
+  <text x="810" y="334" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="24" font-weight="700">Agregar</text>
+
+  <rect x="220" y="380" width="720" height="56" rx="14" fill="#F8FAFC" stroke="#E5E7EB"/>
+  <text x="246" y="416" fill="#374151" font-family="Arial, sans-serif" font-size="22" font-weight="600">3 tareas</text>
+  <text x="840" y="416" fill="#374151" font-family="Arial, sans-serif" font-size="22" font-weight="600">1 completadas</text>
+
+  <rect x="220" y="460" width="720" height="70" rx="14" fill="#F9FAFB" stroke="#E5E7EB"/>
+  <circle cx="265" cy="495" r="12" fill="#D1D5DB"/>
+  <text x="292" y="504" fill="#1F2937" font-family="Arial, sans-serif" font-size="24">Aprender JSX</text>
+  <rect x="820" y="478" width="95" height="36" rx="10" fill="#FEE2E2"/>
+  <text x="867" y="502" text-anchor="middle" fill="#991B1B" font-family="Arial, sans-serif" font-size="18" font-weight="700">Eliminar</text>
+
+  <rect x="220" y="548" width="720" height="70" rx="14" fill="#F9FAFB" stroke="#E5E7EB"/>
+  <circle cx="265" cy="583" r="12" fill="#4F46E5"/>
+  <text x="292" y="592" fill="#6B7280" font-family="Arial, sans-serif" font-size="24" text-decoration="line-through">Crear una función en JavaScript</text>
+  <rect x="820" y="566" width="95" height="36" rx="10" fill="#FEE2E2"/>
+  <text x="867" y="590" text-anchor="middle" fill="#991B1B" font-family="Arial, sans-serif" font-size="18" font-weight="700">Eliminar</text>
+</svg>
