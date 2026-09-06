@@ -16,6 +16,9 @@ export default function Home() {
     { id: 3, text: "Probar la app en el navegador", done: false },
   ]);
 
+  // filter guarda cuál filtro está activo: "all", "pending" o "completed".
+  const [filter, setFilter] = useState("all");
+
   // Esta función se ejecuta cuando el usuario hace clic en "Agregar".
   const handleAddTask = () => {
     // Si el texto está vacío o solo tiene espacios, no agregamos nada.
@@ -56,14 +59,36 @@ export default function Home() {
   // Contamos cuántas tareas están completadas.
   const completedTasks = tasks.filter((item) => item.done).length;
 
+  // Filtramos las tareas según el filtro seleccionado.
+  const filteredTasks = tasks.filter((item) => {
+    if (filter === "pending") return !item.done;
+    if (filter === "completed") return item.done;
+    return true; // "all" muestra todas
+  });
+
   return (
     <main className={styles.page}>
       <section className={styles.card}>
-        <p className={styles.eyebrow}>Proyecto para principiantes</p>
-        <h1>Mi lista de tareas</h1>
-        <p className={styles.subtitle}>
-          Escribe lo que debes hacer hoy y marca cada tarea cuando la completes.
-        </p>
+        <header className={styles.header}>
+          <div className={styles.titleGroup}>
+            <p className={styles.eyebrow}>Organized mind</p>
+            <h1>Lista de tareas</h1>
+            <p className={styles.subtitle}>
+              Escribe lo que debes hacer hoy y marca cada tarea cuando la completes.
+            </p>
+          </div>
+
+          <div className={styles.stats}>
+            <div className={styles.statBox}>
+              <span className={styles.statNumber}>{tasks.length}</span>
+              <span className={styles.statLabel}>Tareas</span>
+            </div>
+            <div className={styles.statBox}>
+              <span className={styles.statNumber}>{completedTasks}</span>
+              <span className={styles.statLabel}>Completadas</span>
+            </div>
+          </div>
+        </header>
 
         <div className={styles.inputRow}>
           <input
@@ -84,17 +109,37 @@ export default function Home() {
             Agregar
           </button>
         </div>
+        
 
-        <div className={styles.summary}>
-          <span>{tasks.length} tareas</span>
-          <span>{completedTasks} completadas</span>
+        <div className={styles.filters}>
+          <button
+            type="button"
+            onClick={() => setFilter("all")}
+            className={filter === "all" ? styles.activeFilter : ""}
+          >
+            Todas
+          </button>
+          <button
+            type="button"
+            onClick={() => setFilter("pending")}
+            className={filter === "pending" ? styles.activeFilter : ""}
+          >
+            Pendientes
+          </button>
+          <button
+            type="button"
+            onClick={() => setFilter("completed")}
+            className={filter === "completed" ? styles.activeFilter : ""}
+          >
+            Completadas
+          </button>
         </div>
 
         <ul className={styles.list}>
-          {tasks.length === 0 ? (
-            <li className={styles.emptyState}>No hay tareas todavía. ¡Agrega una!</li>
+          {filteredTasks.length === 0 ? (
+            <li className={styles.emptyState}>No hay tareas en este filtro.</li>
           ) : (
-            tasks.map((item) => (
+            filteredTasks.map((item) => (
               <li key={item.id} className={styles.taskItem}>
                 <label className={styles.taskLabel}>
                   <input
