@@ -59,7 +59,7 @@ export default function Home() {
   return (
     <main className={styles.page}>
       <section className={styles.card}>
-        <p className={styles.eyebrow}>Proyecto para principiantes</p>
+        <p className={styles.eyebrow}>Proyecto para principiantes que desplegaron en vercel</p>
         <h1>Mi lista de tareas</h1>
         <p className={styles.subtitle}>
           Escribe lo que debes hacer hoy y marca cada tarea cuando la completes.
