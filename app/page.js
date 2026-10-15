@@ -119,6 +119,7 @@ export default function Home() {
             ))
           )}
         </ul>
+        Hola este es el total de tareas: {tasks.length}
       </section>
     </main>
   );
